@@ -12,12 +12,12 @@ describe('movie Database', () => {
   const arrayOfcrews =[ 
     {crew_id: 1001, name: 'Jack Dawson', position: 'Hero', producer:'James Cameron'},
     {crew_id: 1002, name: 'Julie Christie', position: 'Hero', producer:'David Barron'},
-    {crew_id: 1003, name: 'Harvey Keite', position: 'Hero', producer:'Lawrence Bender'},
+    {crew_id: 1003, name: 'Harvey Keite', position: 'Hero', producer:'Lawrence Bender'}
 ]
     const arrayOfCast= [
         {cast_id: 101, role_name:'American dreamer', gender:'male', paid_amount: 2500000},
         {cast_id: 102, role_name:' Queen Gertrude', gender:'Female', paid_amount: 200000},
-        {cast_id: 103, role_name:' tough guy', gender:'male', paid_amount: 150000},
+        {cast_id: 103, role_name:' tough guy', gender:'male', paid_amount: 150000}
         
 ]
 const arrayOfmovies=[

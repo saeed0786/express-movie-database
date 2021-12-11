@@ -7,7 +7,7 @@ const port = 3000
 
 app.use(express.json())
 
-app.use(express.static(path.join(__dirname)))
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 app.get('/crew/:id', async (req,res) => {
@@ -28,6 +28,18 @@ app.post('/movies', async (req,res) => {
     //send a response string
     res.send(newMovie ? 'Movie created': 'post failed')
 })
+
+//put method for crew
+app.post('/crews', async (req,res) => {
+    
+    let newCrews = await Crew.create(req.body)
+    //send a response string
+    res.send(newCrews ? 'Crews created ': 'post failed')
+})
+
+
+
+
 
 //update one crew by id
 app.put('/crew/:id', async (req,res) => {
