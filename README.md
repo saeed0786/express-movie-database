@@ -13,6 +13,6 @@ PostMan Validations!
 ⦁	Post
 ⦁	Delete!
 [image](https://user-images.githubusercontent.com/61039707/145840310-ba8481e2-b4be-4e32-8b43-cf3fe4c53149.png)
-images/EntityRelationshipDiagram.png
 
 
+![draw](https://user-images.githubusercontent.com/61039707/187291188-0e24138f-5011-4174-8893-ec944c5e64f5.PNG)
