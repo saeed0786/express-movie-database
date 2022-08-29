@@ -1,13 +1,11 @@
 const {Sequelize, DataTypes, Model} = require('sequelize')
 
-// const {Sequelize} = require('sequelize')
-const path = require('path')
-
 //create sequelize connection
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: path.join(__dirname, 'express_movie_database.sqlite')
+const sequelize = new Sequelize('database', 'username', 'password',{
+    dialect: 'sqlite', //type of SQL
+    storage: './expressmoviedatabase.sqlite',
+    logging: false 
 })
-sequelize.authenticate().then(console.log("connected")).catch(error=>{console.error('not able to connect',error)});
+
 //export connection
  module.exports = {sequelize, DataTypes, Model}
