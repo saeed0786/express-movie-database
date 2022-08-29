@@ -1,15 +1,17 @@
 const {sequelize, DataTypes, Model} = require('./db')
-const{Movie} = require('./model/movie')
-const{Crew} = require('./model/crew')
-const{Cast} = require('./model/cast')
-// const { Cast } = require('sequelize/dist')
 
-Crew.belongsTo(Movie)
-Movie.hasMany(Crew)
-Cast.belongsTo(Movie)
+//import models
+const {Movie} = require('./models/Movie')
+const {Cast} = require('./models/Cast')
+const {Crew} = require('./models/Crew')
+
+
+
+//association models
 Movie.hasMany(Cast)
+Cast.belongsTo(Movie)
+Movie.hasMany(Crew)
+Crew.belongsTo(Movie)
 
-
-
-
-module.exports = {Movie, Crew, Cast, sequelize}
+//export models with added associations
+module.exports = {Movie, Cast, Crew, sequelize}
