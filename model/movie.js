@@ -1,16 +1,16 @@
-// const {sequelize} = require('../db')
-const { DataTypes, Model, sequelize } = require('../db')
+const {sequelize} = require('../db')
+const {DataTypes, Model} = require('sequelize')
 
 class Movie extends Model {}
 
 Movie.init({
-  movie_id: DataTypes.INTEGER,
-  movie_title: DataTypes.STRING
+    title: DataTypes.STRING
+
 }, {
-  sequelize,
-  timestamps: false
+    sequelize,
+    timestamps: false
 })
 
-module.exports = {Movie};
+module.exports = {Movie}
 
 
